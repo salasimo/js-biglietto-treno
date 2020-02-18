@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    display: none;
+    width:80vw;
+    background-color: #ffcd41;
+    margin: 0 auto;
+}
+
+#container.visible{
+    display: block;
+}
+p[id^=sconto-]{
+    display:none;
+}
+p[id^=sconto-].visible{
+    display: block;
+    font-weight: bold;
+    background-color: lightgreen;
+}
+
+body{
+    text-align: center;
+}
