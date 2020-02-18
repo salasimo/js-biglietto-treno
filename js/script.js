@@ -13,13 +13,13 @@ var prezzoPieno = 0.21 * km;
 var prezzoFinale;
 
 if (age > 65){
-    prezzoFinale = prezzoPieno * 0.6;
+    prezzoFinale = (prezzoPieno * 0.6).toFixed(2);
     document.getElementById("sconto-over").setAttribute("class","visible");
 } else if (age < 18){
-    prezzoFinale = prezzoPieno * 0.8;
+    prezzoFinale = (prezzoPieno * 0.8).toFixed(2);
     document.getElementById("sconto-giovani").setAttribute("class","visible");
 } else {
-    prezzoFinale = prezzoPieno;
+    prezzoFinale = prezzoPieno.toFixed(2);
 }
 
 document.getElementById("eta").innerHTML = age;
