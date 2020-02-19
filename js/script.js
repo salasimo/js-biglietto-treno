@@ -3,7 +3,7 @@
 //moltiplicare costo per km = prezzo pieno
 //se età >= 18 e < 65, prezzo finale = prezzo pieno
 //se età < 18, prezzo finale = prezzo pieno *0,8
-// set età >65, prezzo finale = prezzo pieno *0,6
+//se età >65, prezzo finale = prezzo pieno *0,6
 
 var km = prompt("Quanti km vuoi fare?");
 var age = prompt("Inserisci la tua età.");
@@ -12,7 +12,7 @@ var costoKm = 0.21;
 var prezzoPieno = 0.21 * km;
 var prezzoFinale;
 
-if (age > 65){
+if (age >= 65){
     prezzoFinale = (prezzoPieno * 0.6).toFixed(2);
     document.getElementById("sconto-over").setAttribute("class","visible");
 } else if (age < 18){
